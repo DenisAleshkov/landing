@@ -1,0 +1,306 @@
+@mixin main_button($background-color,$color,$p1, $p2, $p3, $p4,$fw)
+    display: inline-block
+    text-transform: uppercase
+    color: $color
+    background-color: $background-color
+    padding: $p1 $p2 $p3 $p4
+    border-radius: 6px
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15)
+    font-size: 14px
+    font-weight: $fw
+
+@mixin make_strip_icons()
+    background-color: #fff
+    height: 60px
+    width: 60px
+    display: flex
+    position: relative
+    justify-content: center
+    align-items: center
+    border-radius: 30px
+    margin-right: 25px
+
+body
+    padding: 0
+    margin: 0
+    font-family: 'Raleway', sans-serif
+*
+    box-sizing: border-box
+li
+    list-style-type: none
+ul
+    margin-left: 0
+    padding-left: 0
+a
+    text-decoration: none
+h1
+    margin: 0
+    font-weight: bold
+    font-size: 45px
+.title
+    text-align: center
+    font-size: 45px
+    font-weight: 700    
+    color: #061e37
+    margin-bottom: 10px
+.text_title
+    font-size: 15px
+    line-height: 13px
+    display: flex
+    justify-content: center
+    text-align: center
+    .text
+        max-width: 570px
+        line-height: 25px
+        color: #b0bec5
+.header
+    background-image: url('./../image/Color_Fill_1.png')
+    background: linear-gradient(-53deg, #00b8d4 0%, #1de9b6 100%)
+    padding-top: 35px
+    color: #ffffff
+    height: 100vh
+    .logo
+        a
+            display: block
+    &__nav
+        display: flex
+        justify-content: space-between
+        margin-bottom: 160px
+    &__button
+        display: flex
+        align-items: center
+        &_sign
+            background-color: transparent
+            border: 2px solid #ffff
+            color: #ffff
+            font-size: 14px
+            font-weight: 400
+            padding: 4px 17px
+            cursor: pointer
+            &:focus
+                border:none
+    &__content
+        margin-right: 150px
+        &_main
+            max-width: 580px
+            .secondary__content
+                line-height: 35px
+                font-size: 14px
+                font-weight: 400
+            .main__button
+                display: flex
+                &_buy
+                    margin-right: 30px
+                    a
+                        @include main_button(#061e37,#ffffff, 20px,35px,20px,35px,600)
+                &_try
+                    a
+                        @include main_button(#ffffff,#061e37,20px, 25px,20px,25px,800)
+    &__video
+        .video__content
+            width: 600px
+            height: 340px
+            background-image: url('./../image/Rounded_Rectangle_2_copy.png')
+            background-repeat: no-repeat
+            position: relative
+            display: flex
+            justify-content: center
+            align-items: center
+            &_image
+                display: flex
+                flex-direction: column
+                text-transform: uppercase
+                color: #061e37
+                font-size: 12px
+                font-weight: 700
+                position: absolute
+                img
+                    cursor: pointer
+.nav_menu
+    display: flex
+    font-weight: 600
+    font-size: 15px
+    &__item
+        cursor: pointer
+        transition: all 0.5s ease
+        &:not(:last-child)
+            margin-right: 50px
+        &:hover
+            color: #061e37
+.wrapper__flex
+    display: flex
+    justify-content: center
+    align-items: center
+.side-padding
+    padding-right: 80px
+    padding-left: 80px
+.project__information
+    color: #b0bec5
+    margin-top: 55px
+    &_title
+        text-align: center
+        margin-bottom: 90px
+        .sub_title
+            font-size: 25px
+            font-weight: 400
+            margin-bottom: 15px
+    &_items
+        margin-bottom: 80px
+        .project__menu
+            .info__menu
+                display: flex
+                justify-content: space-between
+                &_item
+                    text-align: center
+                    img
+                        width: 68px
+                        height: 71px
+                        margin-bottom: 35px
+                    .title
+                        font-size: 18px
+                        font-weight: 800
+                        color: #061e37
+                        margin-bottom: 20px
+                    .description
+                        max-width: 344px
+                        &__text
+                            font-size: 15px
+                            font-weight: 400
+                            line-height: 20px
+    &_button
+        text-align: center
+        a
+            @include main_button(#1de9b6,#ffffff,20px, 25px,20px,25px,800)
+            display: initial
+.strip
+    margin-top: 100px
+    margin-bottom: 100px
+    &__menu
+        display: flex
+        &_item
+            display: flex
+            align-items: center
+            justify-content: center
+            color: #fff
+            width: 100%
+            padding: 30px 0 30px 0
+            &:nth-child(1)
+                background-color:#80d8ff
+            &:nth-child(2)
+                background-color: #82b1ff
+            &:nth-child(3)
+                background-color: #b388ff
+            &:nth-child(4)
+                background-color: #ea80fc
+            .image_item
+                @include make_strip_icons()
+            .text_item
+                white-space: pre-line
+                font-size: 20px
+                font-weight: 400
+.dropdown
+    &__content
+        padding: 0 25%
+    &__item
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.13)
+        border-radius: 5px
+        &:not(:last-child)
+            margin-bottom: 8px
+        //класс для переопределния стилей
+        .is_open
+            max-height: 200px
+        //-------------------------------
+        &_content
+            transition: 0.5s ease
+            padding: 0 25px
+            max-height: 0
+            overflow: hidden
+            .content
+                display: flex
+                align-items: center               
+                img                   
+                    margin-right: 25px
+                    max-width: 100%
+                    max-height: 150px
+                .text
+                    font-size: 15px
+                    font-weight: 400
+                    line-height: 23px
+    &__title_wrapper
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 15px 25px
+    &__title
+        &_icon
+            margin-right: 20px
+            img
+        &_name
+            font-size: 15px
+            font-weight: 700
+            color: #061e37
+            text-transform: uppercase
+        &_button
+            transition: 0.5s ease
+            max-height: 7px
+            cursor: pointer
+
+.transform_button
+    transform: rotateX(180deg)
+
+.rectangle
+    margin-top: 100px
+    background-image: url('./../image/Rectangle_1_copy_3.png')
+    background-repeat: no-repeat
+    &__content
+        padding: 45px 0 45px 0
+        background-image: linear-gradient(-53deg, #00b8d4 0%, #1de9b6 100%)
+        opacity: 0.95
+        &__block
+            display: flex
+            align-items: center
+            &-title
+                min-width: 550px
+                color: #ffffff
+                .title__main
+                .title__text
+                    margin-bottom: 80px
+                .title__button
+                    a
+                        @include main_button(#061e37,#ffffff, 20px,35px,20px,35px,600)
+            &-slider
+                .slider
+                    padding: 30px 0 30px 0
+                    &__item
+                        display: flex
+                        align-items: center
+                        &:not(:last-child)
+                            margin-bottom: 70px
+                        img
+                            height: 100%
+                        &__text
+                            padding: 30px 30px
+                            background-color: #ffffff
+                            border-radius: 5px
+                            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15)
+                            .name
+                                color: #061e37
+                                font-weight: 700
+                                font-size: 18px
+                            .text
+                                font-style: italic
+                                color: #78909c
+                                font-size: 15px
+                                line-height: 25px
+
+
+
+.down__arrow
+    text-align: center
+    img
+        transform: rotateX(180deg)
+        cursor: pointer
+.up__arrow
+    text-align: center
+    img
+        cursor: pointer
