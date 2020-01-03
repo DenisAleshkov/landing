@@ -1,3 +1,5 @@
+@import "./media.sass"
+
 @mixin main_button($background-color,$color,$p1, $p2, $p3, $p4,$fw)
     display: inline-block
     text-transform: uppercase
@@ -65,8 +67,7 @@ h1
     from
         top: -300px
     to
-        top: 0
-        
+        top: 0       
 .title
     text-align: center
     font-size: 45px
@@ -85,13 +86,18 @@ h1
         color: #b0bec5
 .header
     background-image: url('./../image/Color_Fill_1.png')
-    background: linear-gradient(-53deg, #00b8d4 0%, #1de9b6 100%)
-    padding-top: 35px
+    background-repeat: no-repeat
+    background-size: cover
     color: #ffffff
     height: 100vh
     .logo
         a
             display: block
+    &__background
+        opacity: 0.9
+        padding-top: 35px
+        height: 100%
+        background: linear-gradient(-53deg, #00b8d4 0%, #1de9b6 100%)
     &__nav
         display: flex
         justify-content: space-between
@@ -127,10 +133,14 @@ h1
                     a
                         @include main_button(#ffffff,#061e37,20px, 25px,20px,25px,800)
     &__video
+        background-image: url('./../image/Rounded_Rectangle_2_copy.png')
+        border-radius: 5px
+        border: 2px solid #061e37
         .video__content
             width: 600px
             height: 340px
-            background-image: url('./../image/Rounded_Rectangle_2_copy.png')
+            background-color: #ffffff
+            opacity: 0.95
             background-repeat: no-repeat
             display: flex
             justify-content: center
@@ -181,6 +191,8 @@ h1
                 justify-content: space-between
                 &_item
                     text-align: center
+                    &:not(:last-child)
+                        margin-right: 15px
                     img
                         width: 68px
                         height: 71px
@@ -360,8 +372,23 @@ h1
             .title_text
                 p
                     color: #061e37
-                    max-width: 570px;
-                    line-height: 25px;
+                    max-width: 570px
+                    line-height: 25px
 
-           
-                
+.header__nav
+    @media (max-width: 850px)
+        text-align: center
+        display: block
+.nav_menu
+    @media (max-width: 850px)
+        justify-content: center
+.header__button
+    @media (max-width: 850px)
+        justify-content: center
+.modal__button
+    @media (max-width: 850px)
+        padding: 10px 30px
+        font-size: 16px
+.strip__menu
+    @media (max-width: 850px)
+        display: block

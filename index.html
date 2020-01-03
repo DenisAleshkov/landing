@@ -9,10 +9,9 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,600,800&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
-
 <body>
-
-    <header class="header side-padding">
+    <header class="header ">
+    <div class="header__background side-padding">
         <div class="header__nav">
             <div class="logo">
                 <a href="#">
@@ -28,7 +27,7 @@
                     <li class="nav_menu__item">Help</li>
                 </ul>
             </div>
-            <div class="header__button">
+            <div class="header__button" id='header__button'>
                 <button id='modal__button' class="header__button_sign">sing in</button>
                 <div id="modal" class="modal">
                     <div class="modal__form__wrapper">
@@ -40,9 +39,9 @@
                             <div class="modal__form_content">
                                 <div class="content__form">
                                     <form>
-                                        <input type="text">
-                                        <input type="text">
-                                        <button>login</button>
+                                        <input id="name" type="text">
+                                        <input id="password" type="text">
+                                        <button id="login">login</button>
                                     </form>
                                 </div>
                             </div>
@@ -52,6 +51,7 @@
                 </div>
             </div>
         </div>
+    
         <div class="wrapper__flex">
             <div class="header__content">
                 <div class="header__content_main">
@@ -88,6 +88,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </header>
     <div class="project__information side-padding">
         <div class="project__information_title">

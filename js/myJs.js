@@ -3,6 +3,9 @@ let dropdownBlock = document.querySelectorAll('.dropdown__item_content');
 let modalForm = document.getElementById('modal');
 let modalButton = document.getElementById('modal__button');
 let exitButton = document.getElementById('exit');
+let blockButton=document.getElementById('header__button');
+let login=document.getElementById('login');
+let name=document.getElementById('name');
 
 
 for (let i = 0; i < dropdownButton.length; i++) {
@@ -19,5 +22,13 @@ modalButton.onclick=function(){
 }
 exitButton.onclick=function(){
     modalForm.style.display='none';
+}
+window.onclick=function(e) {
+	if(e.target==modalForm){
+		modalForm.style.display='none';
+	}
+}
+login.onclick=function(){
+	blockButton.innerHTML='Hello,'+name.value;
 }
 

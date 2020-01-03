@@ -70,12 +70,17 @@ h1 {
 
 .header {
   background-image: url("./../image/Color_Fill_1.png");
-  background: linear-gradient(-53deg, #00b8d4 0%, #1de9b6 100%);
-  padding-top: 35px;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #ffffff;
   height: 100vh; }
   .header .logo a {
     display: block; }
+  .header__background {
+    opacity: 0.9;
+    padding-top: 35px;
+    height: 100%;
+    background: linear-gradient(-53deg, #00b8d4 0%, #1de9b6 100%); }
   .header__nav {
     display: flex;
     justify-content: space-between;
@@ -123,24 +128,29 @@ h1 {
           box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
           font-size: 14px;
           font-weight: 800; }
-  .header__video .video__content {
-    width: 600px;
-    height: 340px;
+  .header__video {
     background-image: url("./../image/Rounded_Rectangle_2_copy.png");
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    .header__video .video__content_image {
+    border-radius: 5px;
+    border: 2px solid #061e37; }
+    .header__video .video__content {
+      width: 600px;
+      height: 340px;
+      background-color: #ffffff;
+      opacity: 0.95;
+      background-repeat: no-repeat;
       display: flex;
-      flex-direction: column;
-      text-transform: uppercase;
-      color: #061e37;
-      font-size: 12px;
-      font-weight: 700;
-      position: absolute; }
-      .header__video .video__content_image img {
-        cursor: pointer; }
+      justify-content: center;
+      align-items: center; }
+      .header__video .video__content_image {
+        display: flex;
+        flex-direction: column;
+        text-transform: uppercase;
+        color: #061e37;
+        font-size: 12px;
+        font-weight: 700;
+        position: absolute; }
+        .header__video .video__content_image img {
+          cursor: pointer; }
 
 .nav_menu {
   display: flex;
@@ -180,6 +190,8 @@ h1 {
       justify-content: space-between; }
       .project__information_items .project__menu .info__menu_item {
         text-align: center; }
+        .project__information_items .project__menu .info__menu_item:not(:last-child) {
+          margin-right: 15px; }
         .project__information_items .project__menu .info__menu_item img {
           width: 68px;
           height: 71px;
@@ -376,3 +388,17 @@ h1 {
     color: #061e37;
     max-width: 570px;
     line-height: 25px; }
+
+@media (max-width: 850px) {
+  .header__nav {
+    text-align: center;
+    display: block; }
+  .nav_menu {
+    justify-content: center; }
+  .header__button {
+    justify-content: center; }
+    .header__button .modal__button {
+      padding: 10px 30px;
+      font-size: 16px; }
+  .strip__menu {
+    display: block; } }
