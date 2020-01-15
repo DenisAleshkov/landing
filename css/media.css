@@ -1,0 +1,57 @@
+@media (max-width: 950px) {
+  .header__nav {
+    text-align: center;
+    display: block; }
+  .nav_menu {
+    justify-content: center; }
+  .header__button {
+    justify-content: center; }
+  .header__button_sign {
+    padding: 10px 30px;
+    font-size: 20px; }
+  .modal__button {
+    padding: 10px 30px;
+    font-size: 16px; }
+  .strip__menu {
+    display: block; } }
+
+@media (max-width: 1000px) {
+  .header {
+    height: auto; }
+  .header__nav {
+    margin-bottom: 60px; }
+  .wrapper__flex {
+    flex-direction: column-reverse;
+    text-align: center;
+    margin-bottom: 20px; }
+  .header__content {
+    margin: 30px 0 0 0; }
+  .main__button {
+    justify-content: center; }
+  .side-padding {
+    padding-bottom: 20px; } }
+
+@media (min-width: 300px) {
+  .nav__menu {
+    display: block; }
+    .nav__menu__item {
+      margin-right: 0; } }
+
+@media screen and (max-width: 1225px) {
+  .dropdown__item .is_open {
+    max-height: 220px; }
+  .dropdown__content {
+    padding: 0 15%; } }
+
+@media screen and (max-width: 980px) {
+  .dropdown__content {
+    padding: 0 10%; } }
+
+@media screen and (max-width: 775px) {
+  .dropdown__item_content .content {
+    display: block;
+    text-align: center; }
+  .dropdown__content {
+    padding: 0 10%; }
+  .dropdown__item .is_open {
+    max-height: 360px; } }

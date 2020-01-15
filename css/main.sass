@@ -61,6 +61,15 @@ h1
         background-color: white
         padding: 23px
         border-radius: 9px
+        &_header
+            display: flex
+            justify-content: space-between
+            span
+                display: contents
+                cursor: pointer
+                font-size: 25px
+                &:hover
+                    color: red
 
 
 @keyframes animateTop
@@ -94,7 +103,6 @@ h1
         a
             display: block
     &__background
-        opacity: 0.9
         padding-top: 35px
         height: 100%
         background: linear-gradient(-53deg, #00b8d4 0%, #1de9b6 100%)
@@ -111,12 +119,13 @@ h1
             color: #ffff
             font-size: 14px
             font-weight: 400
-            padding: 4px 17px
+            padding: 7px 25px
             cursor: pointer
+            border-radius: 4px
             &:focus
                 border:none
     &__content
-        margin-right: 150px
+        margin-right: 50px
         &_main
             max-width: 580px
             .secondary__content
@@ -133,28 +142,37 @@ h1
                     a
                         @include main_button(#ffffff,#061e37,20px, 25px,20px,25px,800)
     &__video
-        background-image: url('./../image/Rounded_Rectangle_2_copy.png')
-        border-radius: 5px
+        background-image: url('./../image/header-back.png')
+        width: 100%
+        max-width: 620px
+        height: 320px
+        max-height: 100%
         border: 2px solid #061e37
-        .video__content
-            width: 600px
-            height: 340px
-            background-color: #ffffff
-            opacity: 0.95
-            background-repeat: no-repeat
+        border-radius: 5px
+        .video__block
+            width: 100%
+            height: 100%
+            background-color: rgba(250,250,250,0.85)
             display: flex
             justify-content: center
             align-items: center
-            &_image
+            &_button
                 display: flex
                 flex-direction: column
-                text-transform: uppercase
-                color: #061e37
-                font-size: 12px
-                font-weight: 700
-                position: absolute
+                text-align: center
                 img
+                    box-shadow: 0 5px 5px rgba(0,0,0,.3)
                     cursor: pointer
+                .text__button
+                    text-transform: uppercase
+                    color: #061e37
+                    font-size: 12px
+                    font-weight: 800
+                    margin-top: 20px
+                .image__button
+                    
+                    
+
 .nav_menu
     display: flex
     font-weight: 600
@@ -168,7 +186,7 @@ h1
             color: #061e37
 .wrapper__flex
     display: flex
-    justify-content: center
+    justify-content: space-between
     align-items: center
 .side-padding
     padding-right: 80px
@@ -250,6 +268,7 @@ h1
         //класс для переопределния стилей
         .is_open
             max-height: 200px
+            padding-bottom: 25px
         //-------------------------------
         &_content
             transition: 0.5s ease
@@ -296,7 +315,6 @@ h1
     &__content
         padding: 45px 0 45px 0
         background-image: linear-gradient(-53deg, #00b8d4 0%, #1de9b6 100%)
-        opacity: 0.95
         &__block
             display: flex
             align-items: center
@@ -375,20 +393,3 @@ h1
                     max-width: 570px
                     line-height: 25px
 
-.header__nav
-    @media (max-width: 850px)
-        text-align: center
-        display: block
-.nav_menu
-    @media (max-width: 850px)
-        justify-content: center
-.header__button
-    @media (max-width: 850px)
-        justify-content: center
-.modal__button
-    @media (max-width: 850px)
-        padding: 10px 30px
-        font-size: 16px
-.strip__menu
-    @media (max-width: 850px)
-        display: block

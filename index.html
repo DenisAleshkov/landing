@@ -34,7 +34,7 @@
                         <div class="modal__form">
                             <div class="modal__form_header">
                                 <h1>Sign in</h1>
-                                <span id="exit">Exit</span>
+                                <span id="exit">&times;</span>
                             </div>
                             <div class="modal__form_content">
                                 <div class="content__form">
@@ -80,10 +80,12 @@
                 </div>
             </div>
             <div class="header__video">
-                <div class="video__content">
-                    <div class="video__content_image">
-                        <img src="./image/Play_Button.png" alt="play_button">
-                        <span class="video__content_title">Watch the video</span>
+                <div class="video__block">
+                    <div class="video__block_button">
+                        <div class="image__button">
+                            <img src="./image/Play_Button.png" alt="video">
+                        </div>
+                        <span class="text__button">watch the video</span>
                     </div>
                 </div>
             </div>
@@ -382,7 +384,7 @@
                         </div>
                     </div>
                     <div class="contact__block__form">
-                        <form class="form__submit" action="./pack.json">
+                        <form class="form__submit">
                             <div class="name">
                                 <input type="text" placeholder="First Name">
                                 <input type="text" placeholder="Last Name">
@@ -397,6 +399,8 @@
                     </div>
                 </div>
             </div>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+            <script src="./js/ajax.js"></script>
             <script src="./js/myJs.js"></script>
 </body>
 

@@ -5,11 +5,9 @@ let modalButton = document.getElementById('modal__button');
 let exitButton = document.getElementById('exit');
 let blockButton=document.getElementById('header__button');
 let login=document.getElementById('login');
-let name=document.getElementById('name');
-
+let name=document.getElementById('name');;
 
 for (let i = 0; i < dropdownButton.length; i++) {
-
     dropdownButton[i].addEventListener('click', function () {
         if (dropdownButton[i].dataset.number === dropdownBlock[i].dataset.number) {
             dropdownBlock[i].classList.toggle('is_open');
@@ -19,16 +17,20 @@ for (let i = 0; i < dropdownButton.length; i++) {
 };
 modalButton.onclick=function(){
     modalForm.style.display='flex';
+    document.body.style.overflow='hidden';
 }
 exitButton.onclick=function(){
     modalForm.style.display='none';
+    document.body.style.overflow='visible';
 }
 window.onclick=function(e) {
 	if(e.target==modalForm){
-		modalForm.style.display='none';
+        modalForm.style.display='none';
+        document.body.style.overflow='visible';
 	}
 }
 login.onclick=function(){
 	blockButton.innerHTML='Hello,'+name.value;
+    document.body.style.overflow='visible';
 }
 
