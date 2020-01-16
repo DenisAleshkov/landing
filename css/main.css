@@ -160,7 +160,7 @@ h1 {
   .header__background {
     padding-top: 35px;
     height: 100%;
-    background: linear-gradient(-53deg, #00b8d4 0%, #1de9b6 100%); }
+    background: linear-gradient(-53deg, #00b8d4 0%, #1de9b6 100%), rgba(255, 255, 255, 0.55); }
   .header__nav {
     display: flex;
     justify-content: space-between;
@@ -395,6 +395,9 @@ h1 {
 .transform_button {
   transform: rotateX(180deg); }
 
+.opacity0 {
+  opacity: 0; }
+
 .rectangle {
   margin-top: 100px;
   background-image: url("./../image/Rectangle_1_copy_3.png");
@@ -421,12 +424,14 @@ h1 {
           font-size: 14px;
           font-weight: 600; }
       .rectangle__content__block-slider .slider {
-        padding: 30px 0 30px 0; }
+        position: relative;
+        width: 650px;
+        height: 188px; }
         .rectangle__content__block-slider .slider__item {
+          position: absolute;
           display: flex;
-          align-items: center; }
-          .rectangle__content__block-slider .slider__item:not(:last-child) {
-            margin-bottom: 70px; }
+          align-items: center;
+          transition: all 1s ease; }
           .rectangle__content__block-slider .slider__item img {
             height: 100%; }
           .rectangle__content__block-slider .slider__item__text {
