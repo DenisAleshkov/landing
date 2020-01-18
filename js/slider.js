@@ -4,26 +4,25 @@ let buttonDown = document.getElementById('button-down');
 
 let current = 0;
 
-
 function slider(){
-    
 	for(let i=0; i < sliderItem.length; i++){
  		sliderItem[i].classList.add('opacity0');
 	}
-
     sliderItem[current].classList.remove('opacity0');
-
 }
 
 slider();
 
 buttonUp.onclick=function(){
-	current===sliderItem.length-1 ? current=0: current++
+	current===sliderItem.length-1 ? current=0 : current++
 	slider();
 }
 
 buttonDown.onclick=function(){
 	current--;
-	current===-1 ? current=sliderItem.length-1
+	if(current===-1){
+		current=sliderItem.length-1;
+	}
+	
 	slider();
 }
