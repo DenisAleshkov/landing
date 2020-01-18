@@ -3,7 +3,7 @@ $( document ).ready(function() {
         event.preventDefault();
         $.ajax({
                 type: 'POST',
-                url: 'http://localhost:3000/ajax/puck.php',
+                url: 'puck.php',
                 cache: false,
                 data: $('.form__submit').serialize(),
             })

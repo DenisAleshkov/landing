@@ -39,6 +39,13 @@ h1
     margin: 0
     font-weight: bold
     font-size: 45px
+input:focus, input:active,input:hover
+    outline: none
+    outline-offset: none
+textarea:focus, textarea:active,textarea:hover
+    outline: none
+    outline-offset: none
+
 .modal
     top: 0
     left: 0
@@ -380,20 +387,29 @@ h1
     &_title
         margin-bottom: 100px
     &__slider
-        height: 400px
+        height: 500px
         .items
+
             display: flex
             text-align: center
             justify-content: space-around
             .item
+                transition: all 1s ease
                 width: 35%
+                &:hover
+                    border: 5px solid #ffffff
+                    border-radius: 100px
+                    box-shadow: 0 5px 5px rgba(0,0,0,.55)
                 .ellips__wrapper
+                    display: inline-block
+                    border-radius: 100px
                     img
                         cursor: pointer
                 .animate__block
                     display: none
                     animation-name: show-text
                     animation-duration: 1s
+                    padding: 15px
                     .item__text
                         .description
                             &__text
@@ -419,14 +435,102 @@ h1
         opacity: 1
         
 
+input[type="text"]
+    font-family: Raleway
+    padding: 15px 20px
+    border: 2px solid #061e37
+    color: #061e37
+    font-size: 14px
+    border-radius: 6px
+    width: 50%
+
 
 .contact
+    margin-bottom: 100px
     &__block
         &__title
-            .title
+            margin-bottom: 50px
             .title_text
                 p
                     color: #061e37
                     max-width: 570px
                     line-height: 25px
+        &__form
+            display: flex
+            justify-content: center
+            .form__submit
+                width: 650px
+                div
+                    margin-bottom: 15px
+                .name
+                    display: flex
+                    justify-content:center
+                    input:first-child
+                        margin-right: 40px
+                .data
+                    display: flex
+                    justify-content:center
+                    input:first-child
+                        margin-right: 40px
+                .message
+                    display: grid
+                    grid-auto-rows: 150px
+                    textarea
+                        resize: none
+                        font-family: Raleway
+                        padding: 15px 20px
+                        border: 2px solid #061e37
+                        color: #061e37
+                        font-size: 14px
+                        border-radius: 6px
+                .submit__button
+                    display: flex
+                    justify-content: flex-end
+                    button
+                        @include main_button(#1de9b6,#ffffff, 20px,35px,20px,35px,600)
+                        border: none
+                        cursor: pointer
+                        outline: none
+.footer
+    background-color: #061e37
+    padding-top: 100px
+    padding-bottom: 100px
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        .left__part
+            .logo
+                margin-bottom: 50px
+            .left__part__list
+                span
+                    color: #ffffff
+                    margin-right: 20px
+                    margin-left: 20px
+                    font-weight: 900
+                display: flex
+                &--item
+                    a
+                        color: #ffffff
+        .right__part
+            &__menu
+                .footer_menu
+                    margin: 0 0 50px 0
+                    display: flex
+                    &__item
+                        color: #ffffff
+                        cursor: pointer
+                        font-weight: 600
+                        &:not(:last-child)
+                            margin-right: 40px
+                .social
+                    &__list
+                        display: flex
+                        justify-content: flex-end
+                        align-items: center
+                        &_item
+                            &:not(:last-child)
+                                margin-right: 20px
 
+
+
+                        
