@@ -3,15 +3,24 @@ $( document ).ready(function() {
         event.preventDefault();
         $.ajax({
                 type: 'POST',
-                url: 'puck.php',
+                url: '/js/pack.php',
                 cache: false,
                 data: $('.form__submit').serialize(),
             })
             .done(function() {
-               alert('ok');
+                Swal.fire(
+                    'Good job!',
+                    'Your data has been sent successfully!',
+                    'success'
+                )
             })
             .fail(function() {
-               console.log($('.form__submit').serialize());
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Something went wrong!',
+                    footer: '<a href>Why do I have this issue?</a>'
+                })
             })
     });
 });
